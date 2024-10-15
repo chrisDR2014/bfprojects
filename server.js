@@ -1,11 +1,11 @@
 import express from 'express';
-import {exec} from 'child_process';
+import { exec } from 'child_process';
 import os from 'os';
 import dotenv from 'dotenv';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
-import fs from 'fs'; 
+import fs from 'fs';
 import { handleUpload } from './autoSortPendingPuroClaims/uploadHandler.js'; // Import the upload handler
 
 
@@ -17,7 +17,7 @@ const PORT = process.env.PORT || 8000;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-console.log(`Directory Path: ${__dirname} `)    
+console.log(`Directory Path: ${__dirname} `)
 
 // Serve static files from the 'public' directory
 app.use(express.static(path.join(__dirname, 'frontend', 'public')));
@@ -43,7 +43,7 @@ const footer = await readFile(footerPath);
 // Route for the home page
 app.get('/', async (req, res) => {
     try {
-        
+
         const mainContentPath = path.join(__dirname, 'frontend', 'public', 'html', 'index.html');
         const mainContent = await readFile(mainContentPath);
 
@@ -55,7 +55,7 @@ app.get('/', async (req, res) => {
 });
 
 // Route for Project 1
-app.get('/project1', async (req, res) => {
+app.get('/autoSortPendingPuroClaims', async (req, res) => {
     try {
         const projectContentPath = path.join(__dirname, 'autoSortPendingPuroClaims', 'project1.html');
         const projectContent = await readFile(projectContentPath);
