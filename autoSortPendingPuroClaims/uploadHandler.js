@@ -4,7 +4,7 @@ import { copyFirstSheetHeader, createNewSheetWithData } from './helperFunctions/
 
 // Setup Google API authentication
 const auth = new google.auth.GoogleAuth({
-    keyFile: './project1/rainloop_creds.json',
+    keyFile: './autoSortPendingPuroClaims/rainloop_creds.json',
     scopes: 'https://www.googleapis.com/auth/spreadsheets',
 });
 
