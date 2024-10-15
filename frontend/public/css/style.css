@@ -1,0 +1,175 @@
+/* Color Variables */
+:root {
+    --light-purple-bg: #f6ebfa; /* Light purple background */
+    --dark-purple-bg: #b38feb; /* Lighter purple for navbar and footer */
+    --card-bg: #e6d4f3; /* Lighter purple for card backgrounds */
+    --border-color: #c2a8e2; /* Border color for card */
+    --text-color-dark: #5a189a; /* Darker purple for text */
+    --link-color: #7d4fc5; /* Link color */
+    --link-hover-color: #c2a8e2; /* Hover effect for links */
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Layout */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color-dark);
+    background-color: var(--light-purple-bg);
+}
+
+header {
+    background-color: var(--dark-purple-bg);
+    padding: 30px;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.navbar .logo img {
+    width: 100px;
+}
+
+.navbar .menu {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+}
+
+.navbar .menu li {
+    display: inline;
+}
+
+.navbar .menu li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--light-purple-bg);
+    transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+    color: var(--link-hover-color);
+}
+
+.header-description {
+    margin-top: 30px;
+    color: var(--light-purple-bg);
+}
+
+.header-description h1 {
+    font-size: 2.5rem;
+}
+
+.header-description p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+/* Main Section */
+.projects {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid var(--border-color);
+    width: 30%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--text-color-dark);
+}
+
+.card p {
+    margin-bottom: 10px;
+    color: var(--text-color-dark);
+}
+
+.card a {
+    text-decoration: none;
+    color: var(--link-color);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.card a:hover {
+    color: var(--link-hover-color);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: var(--dark-purple-bg);
+    color: var(--light-purple-bg);
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-description h1 {
+        font-size: 2rem;
+    }
+
+    .header-description p {
+        font-size: 1rem;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .navbar .logo img {
+        width: 80px;
+    }
+
+    .navbar .menu li a {
+        font-size: 1rem;
+    }
+}

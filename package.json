@@ -1,0 +1,23 @@
+{
+  "name": "busterfetcher-projects",
+  "version": "1.0.0",
+  "description": "The collection of my BusterFetcher projects in one place",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --watch-path=./ server.js"
+  },
+  "keywords": [
+    "BusterFetcher"
+  ],
+  "author": "Christoffer Carlsson",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "cors": "^2.8.5",
+    "googleapis": "^144.0.0",
+    "mongoose": "^8.7.0"
+  }
+}
