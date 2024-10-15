@@ -6,14 +6,14 @@ form.addEventListener('submit', async (e) => {
     const data = document.getElementById('data').value.trim(); // Trim whitespace
 
     console.log('Submitting with sheetName:', sheetName, 'and data:', data);
-    
+
     // Make sure that the data variable has a value before sending the request
     if (!sheetName || !data) {
         alert('Please enter data before submitting.');
         return;
     }
 
-    const response = await fetch('/project1', {
+    const response = await fetch('/autoSortPendingPuroClaims', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ sheetName, data })  // Ensure this is correct
