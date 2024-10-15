@@ -9,7 +9,7 @@ const trackingSchema = new mongoose.Schema({
 const Tracking = mongoose.model('Tracking', trackingSchema);
 
 export const connectToMongoDB = async () => {
-    await mongoose.connect('mongodb://localhost:27017/purotest');
+    await mongoose.connect(`mongodb://${process.env.MONGODB_IP}:27017/purotest`);
 };
 
 export const uploadToMongoDB = async (businesses, trackingNumbers) => {
